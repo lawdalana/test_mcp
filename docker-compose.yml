@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mcp_server:
+    build: ./mcp_server
+    ports:
+      - "8000:8000"
+  mcp_client:
+    build: ./mcp_client
+    depends_on:
+      - mcp_server
